@@ -2,14 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Audio registrazione1 = new Audio("Audio1", 5, 3);
+        Video video1 = new Video("Video1", 3, 5, 4);
+        System.out.println("Audio");
+        registrazione1.abbassaVolume();
+        registrazione1.play();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        registrazione1.alzaVolume();
+        registrazione1.play();
+        System.out.println("\nVideo");
+        video1.play();
+
+        video1.abbassaVolume();
+        video1.aumentaLuminosita();
+
+        video1.play();
     }
 }
