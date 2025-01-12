@@ -1,8 +1,10 @@
-public class Audio extends ElementoMultimediale{
+public class Audio extends ElementoMultimediale implements Eseguibile{
+    private int durata;
     private int volume;
 
     public Audio(String titolo, int durata, int volume){
-        super(titolo, durata);
+        super(titolo);
+        this.durata = durata;
         this.volume = volume;
     }
 
@@ -28,5 +30,9 @@ public class Audio extends ElementoMultimediale{
             }
             System.out.println(str.toString());
         }
+    }
+
+    public void esegui(){
+        play();
     }
 }
